@@ -2,8 +2,8 @@
 steps: 
   - 
     args: 
-      - "apt-get install gcc g++ libssl-dev openssl libudev-dev pkg-config file make -y"
-      - "cargo check"
+      - ['bash', 'apt-get install gcc g++ libssl-dev openssl libudev-dev pkg-config file make -y']
+      - 'cargo check'
     name: "rust:latest"
   - 
     args: 
@@ -14,3 +14,4 @@ steps:
     args: 
       - "cargo build"
     name: "rust:latest"
+		
