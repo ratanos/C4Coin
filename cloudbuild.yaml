@@ -1,0 +1,7 @@
+steps:
+- name: 'rust:latest'
+  args: ['cargo', 'check']
+- name: 'rust:latest'
+  args: [ 'cargo' 'test' '--all' '--verbose' ]
+- name: 'rust:latest'
+  args: ['cargo', 'build']
