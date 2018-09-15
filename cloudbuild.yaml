@@ -2,6 +2,7 @@
 steps: 
   - 
     args: 
+      - ['bash', 'echo $PATH']
       - ['bash', 'apt-get install gcc g++ libssl-dev openssl libudev-dev pkg-config file make -y']
       - 'cargo check'
     name: "rust:latest"
@@ -14,4 +15,3 @@ steps:
     args: 
       - "cargo build"
     name: "rust:latest"
-		
