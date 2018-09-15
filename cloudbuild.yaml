@@ -2,18 +2,15 @@
 steps: 
   - 
     args: 
-      - cargo
-      - check
+		  - apt-get install gcc g++ libssl-dev openssl libudev-dev pkg-config file make -y
+      - cargo check
     name: "rust:latest"
   - 
     args: 
-      - cargo
-      - test
-      - "--all"
-      - "--verbose"
+		  - apt-get install gcc g++ libssl-dev openssl libudev-dev pkg-config file make -y
+      - cargo test --all --verbose
     name: "rust:latest"
   - 
     args: 
-      - cargo
-      - build
+      - cargo build
     name: "rust:latest"
